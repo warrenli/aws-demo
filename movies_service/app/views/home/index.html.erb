@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Movies Service - Web Service</title>
+</head>
+<body>
+<h1>Movies Service - Web Service</h1>
+<ul>
+  <p>
+  <li>Movies_service</li>
+    <ul>
+      <li><a href="<%= get_server_path << "/movies_service/wsdl" %>">WSDL</a></li><br />
+      <li><a href="<%= get_server_path << "/movies_service/invoke" %>">Invoke</a></li><br />
+      <ul>
+        <li>Method get_movie(Integer movie_id) return Logical::Movie</li>
+          <ul>
+            <li>Endpoint <%= get_server_path << "/movies_service/api" %></li>
+          </ul>
+        <br />
+        <li>Method get_theatre(Integer theatre_id) return Logical::Movie</li>
+          <ul>
+            <li>Endpoint <%= get_server_path << "/movies_service/api" %></li>
+          </ul>
+      </ul>
+
+    </ul>
+  </p>
+
+</ul>
+
+</body>
+</html>
+

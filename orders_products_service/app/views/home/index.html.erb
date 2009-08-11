@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Products Service and Orders Service- Web Service</title>
+</head>
+<body>
+<h1>Products Service and Orders Service- Web Service</h1>
+<ul>
+  <p>
+  <li>Products_service</li>
+    <ul>
+      <li><a href="<%= get_server_path << "/products_service/wsdl" %>">WSDL</a></li><br />
+      <li><a href="<%= get_server_path << "/products_service/invoke" %>">Invoke</a></li><br />
+      <ul>
+        <li>Method add_product(String name, Float price, Integer quantity) return Integer</li>
+          <ul>
+            <li>Endpoint <%= get_server_path << "/products_service/api" %></li>
+          </ul>
+          <br/>
+        <li>Method get_product(String product_name) return Logical::Product</li>
+          <ul>
+            <li>Endpoint <%= get_server_path << "/products_service/api" %></li>
+          </ul>
+      </ul>
+    </ul>
+  </p>
+
+  <p>
+  <li>Orders_service</li>
+    <ul>
+      <li><a href="<%= get_server_path << "/orders_service/wsdl" %>">WSDL</a></li><br />
+      <li><a href="<%= get_server_path << "/orders_service/invoke" %>">Invoke</a></li><br />
+      <ul>
+        <li>Method place_order([Logical::LineItem], Logical::CreditCardPayment) return Logical::OrderPlaced</li>
+          <ul>
+            <li>Endpoint <%= get_server_path << "/orders_service/api" %></li>
+          </ul>
+      </ul>
+    </ul>
+  </p>
+
+</ul>
+
+</body>
+</html>
+

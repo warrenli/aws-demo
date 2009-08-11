@@ -1,0 +1,35 @@
+= 簡介
+這套程式包含兩個 Rails Applications/Webservices，第一個是Movies servie，另一個是Orders and Products service。
+
+目的是實現 "Enterprise Rails"這本書的 第十五章及部份第十六章，有關XML-RPC Service的範例，不過使用了sqlite3，並作了少許修改。
+
+程式是在 Ubuntu 8.10 編寫及測試
+
+
+== 設定
+安裝插件 datanoise-actionwebservice
+    sudo gem install datanoise-actionwebservice --source http://gems.github.com
+
+安裝插件 composite_primary_keys
+    sudo gem install composite_primary_keys
+
+
+== 啟動 Movies service
+
+    cd movies_service
+    script/server
+
+== 啟動 Orders and Products service
+
+    cd orders_products_service
+    script/server -p 3001
+
+
+== 測試
+
+    cd movies_service
+    rake test
+
+    cd orders_products_service
+    rake test
+
